@@ -124,6 +124,55 @@
       /* CSS:ABOUT-START */
       .section-about {
       }
+
+      .about-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .about-text p {
+        margin-bottom: 12px;
+        color: #cbd5f5;
+      }
+
+      .about-list {
+        margin: 16px 0;
+        padding-left: 20px;
+      }
+
+      .about-list li {
+        margin-bottom: 8px;
+      }
+
+      .about-actions {
+        margin-top: 16px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background-color: #38bdf8;
+        color: #020617;
+      }
+
+      .btn-outline {
+        border: 1px solid #38bdf8;
+        color: #38bdf8;
+      }
+
+      .about-image {
+        width: 100%;
+      }
       /* CSS:ABOUT-END */
 
       /* CSS:SKILLS-START */
@@ -164,6 +213,19 @@
 
         .section-title {
           font-size: 2rem;
+        }
+
+        .about-layout {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        .about-text {
+          flex: 1;
+        }
+
+        .about-image {
+          flex: 1;
         }
       }
 
@@ -232,23 +294,39 @@
           aria-labelledby="about-heading"
         >
           <div class="container">
-            <h2 id="about-heading" class="section-title">
-              關於我（之後會用 Section SDD 替換）
-            </h2>
-            <p>
-              這裡目前是 About
-              區的占位內容，未來會放置個人背景、經歷、專長領域與職涯方向等資訊。
-            </p>
-            <p>
-              之後會用 Section SDD 的 Prompt 產生新的 section，請把新的 section
-              程式碼整段貼在這兩個註解中間，完全取代現在這一區。
-            </p>
+            <div class="about-layout">
+              <div class="about-text">
+                <h2 id="about-heading" class="section-title">關於我</h2>
 
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-              alt="桌面上擺放程式碼與開發工具的工作環境"
-              loading="lazy"
-            />
+                <p>
+                  我目前專注於前端開發，主要使用 HTML、CSS、JavaScript
+                  以及現代框架進行網站與系統介面的開發，致力於打造穩定且具可維護性的使用者體驗。
+                </p>
+
+                <p>
+                  我具備系統化思維，重視溝通與需求釐清，習慣將複雜問題拆解並清楚表達，也樂於分享與教學，讓團隊能更有效率地協作。
+                </p>
+
+                <ul class="about-list">
+                  <li>擅長前端架構設計與元件化開發</li>
+                  <li>能協助將需求轉換為清晰可實作的技術方案</li>
+                  <li>重視程式碼品質與長期維護性</li>
+                </ul>
+
+                <div class="about-actions">
+                  <a class="btn btn-primary" href="#projects">查看作品集</a>
+                  <a class="btn btn-outline" href="#contact">聯絡我</a>
+                </div>
+              </div>
+
+              <div class="about-image">
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+                  alt="專注於電腦前撰寫程式碼的工程師"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </section>
         <!-- SECTION:ABOUT-END -->
